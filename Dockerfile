@@ -20,8 +20,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 
 # Expose ports
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 5000
 
-ENV ASPNETCORE_URLS=http://+:8080
+ENV ASPNETCORE_URLS=http://+:5000
 ENTRYPOINT ["dotnet", "TodoApi.dll"]
